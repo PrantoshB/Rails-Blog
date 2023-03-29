@@ -1,37 +1,11 @@
 <a name="readme-top"></a>
-<h1> Rails Blog</h1>
+<h1> Rails Blog App</h1>
 
-<!--
-HOW TO USE:
-This is an example of how you may give instructions on setting up your project locally.
-
-Modify this file to match your project and remove sections that don't apply.
-
-REQUIRED SECTIONS:
-- Table of Contents
-- About the Project
-  - Built With
-  - Live Demo
-- Getting Started
-- Authors
-- Future Features
-- Contributing
-- Show your support
-- Acknowledgements
-- License
-
-OPTIONAL SECTIONS:
-- FAQ
-
-After you're finished please remove all the comments and instructions!
--->
-
-<!-- TABLE OF CONTENTS -->
 
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 My Blog App ](#-My-Blog-App-)
+- [📖 Rails Blog App ](#-My-Blog-App-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -176,5 +150,13 @@ I would like to thank Microverse for providing the reading materials that aided 
 - **Can I contribute to this project?**
 
   - Contact me so I can add you as a collaborator. Alternatively you can leave an issue, it will be well appreciated.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](https://github.com/PrantoshB/Rails-Blog/blob/data-model/LICENSE.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
