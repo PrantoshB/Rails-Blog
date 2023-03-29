@@ -157,6 +157,6 @@ I would like to thank Microverse for providing the reading materials that aided 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/PrantoshB/Rails-Blog/blob/data-model/LICENSE.md) licensed.
+This project is [MIT](https://github.com/PrantoshB/Rails-Blog/blob/data-model/LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
