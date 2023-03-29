@@ -1,0 +1,2 @@
+class Prantosh < ApplicationRecord
+end
