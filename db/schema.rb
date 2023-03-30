@@ -10,45 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_29_115702) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_29_303238) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.integer "AuthorId"
-    t.integer "PostId"
-    t.string "Text"
-    t.datetime "UpdatedAt"
-    t.datetime "CreatedAt"
+    t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
+    t.bigint "user_id", null: false
     t.bigint "posts_id", null: false
     t.index ["posts_id"], name: "index_comments_on_posts_id"
-    t.index ["users_id"], name: "index_comments_on_users_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "likes", force: :cascade do |t|
-    t.integer "AuthorId"
-    t.integer "PostId"
-    t.datetime "CreatedAt"
-    t.datetime "UpdatedAt"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
     t.bigint "posts_id", null: false
+    t.bigint "users_id", null: false
     t.index ["posts_id"], name: "index_likes_on_posts_id"
     t.index ["users_id"], name: "index_likes_on_users_id"
   end
 
   create_table "posts", force: :cascade do |t|
-    t.integer "AuthorId"
-    t.string "Title"
-    t.string "Text"
-    t.datetime "CreatedAt"
-    t.datetime "UpdatedAt"
-    t.integer "CommentsCounter"
-    t.integer "LikesCounter"
+    t.string "title"
+    t.string "text"
+    t.integer "comments_counter"
+    t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "author_id"
@@ -56,18 +45,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_29_115702) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "Name"
-    t.string "Photo"
-    t.string "Bio"
-    t.date "UpdatedAt"
-    t.date "CreatedAt"
-    t.integer "PostsCounter"
+    t.string "name"
+    t.string "photo"
+    t.string "bio"
+    t.integer "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   add_foreign_key "comments", "posts", column: "posts_id"
-  add_foreign_key "comments", "users", column: "users_id"
+  add_foreign_key "comments", "users"
   add_foreign_key "likes", "posts", column: "posts_id"
   add_foreign_key "likes", "users", column: "users_id"
   add_foreign_key "posts", "users", column: "author_id"
