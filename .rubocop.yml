@@ -28,7 +28,7 @@ Metrics/BlockLength:
   IgnoredMethods: ['describe']
   Max: 50
 Layout/LineLength:
-  Max: 250
+  Max: 350
 Metrics/CyclomaticComplexity:
   Max: 15
 Metrics/PerceivedComplexity:
