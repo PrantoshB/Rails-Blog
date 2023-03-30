@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-<h1> Rails Blog App</h1>
+<h1 align='center'> Rails Blog App ✍🏼</h1>
 
 
 # 📗 Table of Contents
@@ -98,10 +98,11 @@ Install this project with:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Prantosh Biswas*
+### 👤 Prantosh Biswas
 
 - GitHub: [@PrantoshB](https://github.com/PrantoshB)
 - LinkedIn: [Prantosh Biswas](https://www.linkedin.com/in/prantosh/)
+- Twitter: [@prantalks](https://twitter.com/prantalks)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
