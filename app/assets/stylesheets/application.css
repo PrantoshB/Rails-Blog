@@ -1,15 +1,134 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-container {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0;
+  width: 40vw;
+}
+
+.user-container img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.user-container h1 {
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+.name-and-counter {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  width: 40vw;
+}
+
+#post-counter {
+  margin: 1% 0;
+  align-self: flex-end;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.userpage,
+.posts-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  width: 50vw;
+}
+
+.bio {
+  width: 50vw;
+}
+
+.recent-posts {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-like {
+  margin-left: 80%;
+}
+
+#post-text {
+  margin: 0;
+  width: 50vw;
+}
+
+.button {
+  margin-top: 7%;
+  padding: 1.5% 4%;
+  border-radius: 5px;
+  background-color: rgb(253, 57, 57);
+  color: white;
+}
+
+.comments-container {
+  width: 50vw;
+  padding: 3% 0;
+}
+
+#half {
+  width: 20vw;
+  margin-left: 0;
+}
+
+#post-title {
+  font-size: 2.2rem;
+}
+
+.post-page {
+  width: 55vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.title-and-info {
+  width: 55vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-like-for-post {
+  font-size: 1.2rem;
+}
+
+.post-page p {
+  width: 55vw;
+}
+
+#post-page-hr {
+  margin-left: 0;
+  width: 55vw;
+}
+
+.comments-container-post {
+  width: 55vw;
+  padding: 2% 0;
+}
+
+#single-comment {
+  margin: 2% 0;
+}
