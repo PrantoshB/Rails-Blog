@@ -70,7 +70,7 @@ hr {
 }
 
 #post-text {
-  margin: 0;
+  margin: 1% 0;
   width: 50vw;
 }
 
@@ -84,7 +84,6 @@ hr {
 
 .comments-container {
   width: 50vw;
-  padding: 3% 0;
 }
 
 #half {
