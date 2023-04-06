@@ -17,7 +17,7 @@
                 <h2><%= post.title %>
                 </h2>
                 <p id="post-text">
-                    <%= post.text %>
+                    <%= post.text.split[0..80].join(" ") %>
                 </p>
                 <div class="comment-like">
                     <span>Comments: <%= post.comments_counter%>, </span>
@@ -28,8 +28,7 @@
             <hr id="half">
             <% end %>
             <div class="comments-container">
-                <% @comments=Post.find(post.id).comments %>
-                    <% @comments.each do |comment| %>
+                    <% post.most_recent_comments.each do |comment| %>
                         <div  id="single-comment"> 
                             <span> <%= comment.user.name %> : <%= comment.text %></span>
                         </div>
