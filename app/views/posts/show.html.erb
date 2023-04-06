@@ -1,1 +1,29 @@
-<h2>Show Post</h2>
+<section class="post-page">
+    <div class='title-and-info'>
+        <h1 id="post-title">
+            <%= @post.title%> by <%= @post.author.name%>
+        </h1>
+        <div class="comment-like-for-post">
+            <span>Comments: <%= @post.comments_counter%>, </span>
+            <span class="likes">Likes:<%= @post.likes_counter%></span>
+        </div>
+    </div>
+    <p>
+        <%= @post.text%>
+    </p>
+    <hr id="post-page-hr">
+
+            <div class="comments-container-post">
+                <% @comments=Post.find(@post.id).comments %>
+                    <% @comments.each do |comment| %>
+                        <div  id="single-comment">
+                            <span> <%= comment.user.name %> : <%= comment.text %></span>
+                        </div>
+                    <% end %>
+            </div>
+             
+            <% if @post.comments_counter != 0 %>
+            <hr id="half">
+            <% end %>
+
+</section>

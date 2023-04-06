@@ -1,1 +1,44 @@
-<h1>Users Posts</h1>
+<section class="posts-page">
+    <div class="user-container">
+        <img src=<%=@user.photo %> alt="user photo">
+        <div class="name-and-counter">
+            <h1>
+                <%= @user.name %>
+            </h1>
+            <h3 id="post-counter">Number of posts: <%= @user.posts_counter %>
+            </h3>
+        </div>
+    </div>
+    <hr>
+
+    <div class="recent-posts">
+        <% @posts.each do |post| %>
+            <a href="./<%=post.id%>">
+                <h2><%= post.title %>
+                </h2>
+                <p id="post-text">
+                    <%= post.text %>
+                </p>
+                <div class="comment-like">
+                    <span>Comments: <%= post.comments_counter%>, </span>
+                    <span class="likes">Likes:<%= post.likes_counter%></span>
+                </div>
+            </a>
+            <% if post.comments_counter != 0 %>
+            <hr id="half">
+            <% end %>
+            <div class="comments-container">
+                <% @comments=Post.find(post.id).comments %>
+                    <% @comments.each do |comment| %>
+                        <div  id="single-comment"> 
+                            <span> <%= comment.user.name %> : <%= comment.text %></span>
+                        </div>
+                    <% end %>
+            </div>
+             
+            <% if post.comments_counter != 0 %>
+            <hr id="half">
+            <% end %>
+        <% end %>
+    </div>
+</section>
