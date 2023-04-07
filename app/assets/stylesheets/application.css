@@ -176,3 +176,22 @@ hr {
   font-size: 1rem;
   cursor: pointer;
 }
+
+.like-comment-buttons {
+  display: flex;
+  gap: 2rem;
+  margin: 4% 0;
+}
+
+.comment-button,
+.like-button {
+  background-color: rgb(253, 57, 57);
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
