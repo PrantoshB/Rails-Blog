@@ -13,17 +13,19 @@
     </p>
     <hr id="post-page-hr">
 
-            <div class="comments-container-post">
-                <% @comments=Post.find(@post.id).comments %>
-                    <% @comments.each do |comment| %>
-                        <div  id="single-comment">
-                            <span> <%= comment.user.name %> : <%= comment.text %></span>
-                        </div>
-                    <% end %>
-            </div>
-             
-            <% if @post.comments_counter != 0 %>
-            <hr id="half">
-            <% end %>
+    <div class="comments-container-post">
+        <% @comments=Post.find(@post.id).comments %>
+            <% @comments.each do |comment| %>
+                <div id="single-comment">
+                    <span>
+                        <%= comment.user.name %> : <%= comment.text %>
+                    </span>
+                </div>
+                <% end %>
+    </div>
+
+    <% if @post.comments_counter !=0 %>
+        <hr id="half">
+        <% end %>
 
 </section>

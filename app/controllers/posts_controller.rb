@@ -8,4 +8,17 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @comments = @post.comments
   end
+
+  def new
+    @user = current_user
+    @post = Post.new
+  end
+
+  def create
+    @user = current_user
+    @post = Post.new(params[:post])
+    @post.author_id = @user.id
+    @post.save
+    redirect_to user_posts_path(@user)
+  end
 end

@@ -23,7 +23,7 @@
                 <h2><%= post.title %>
                 </h2>
                 <p id="post-text">
-                    <%= post.text %>
+                    <%= post.text.split[0..80].join(" ") %>
                 </p>
                 <div class="comment-like">
                     <span class="comments">Comments: <%= post.comments_counter%>, </span>

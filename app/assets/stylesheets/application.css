@@ -12,7 +12,7 @@
   display: flex;
   gap: 2rem;
   margin: 1rem 0;
-  width: 40vw;
+  width: 60vw;
 }
 
 .user-container img {
@@ -51,15 +51,15 @@ a {
 }
 
 hr {
-  width: 50vw;
+  width: 60vw;
 }
 
 .bio {
-  width: 50vw;
+  width: 60vw;
 }
 
 .recent-posts {
-  width: 50vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ hr {
 
 #post-text {
   margin: 1% 0;
-  width: 50vw;
+  width: 60vw;
 }
 
 .button {
@@ -83,7 +83,7 @@ hr {
 }
 
 .comments-container {
-  width: 50vw;
+  width: 60vw;
 }
 
 #half {
