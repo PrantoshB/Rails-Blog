@@ -1,0 +1,11 @@
+<section class="new-post-container">
+    <h1>Add New Post</h1>
+    <%= form_with model: @post, url: user_posts_path(@user) do |form| %>
+      <div class="form-container">
+        <%= form.text_field :title, required: true, autofocus: true, class: "form-input" %>
+        <%= form.text_area :text, required: true, autofocus: true, class: "form-input" %>
+        <%= form.submit "Submit", class: "form-button" %>
+      </div>
+      
+    <% end %>
+  </section>

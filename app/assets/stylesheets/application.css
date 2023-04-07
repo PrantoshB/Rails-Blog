@@ -12,7 +12,7 @@
   display: flex;
   gap: 2rem;
   margin: 1rem 0;
-  width: 40vw;
+  width: 60vw;
 }
 
 .user-container img {
@@ -51,15 +51,15 @@ a {
 }
 
 hr {
-  width: 50vw;
+  width: 60vw;
 }
 
 .bio {
-  width: 50vw;
+  width: 60vw;
 }
 
 .recent-posts {
-  width: 50vw;
+  width: 60vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +71,7 @@ hr {
 
 #post-text {
   margin: 1% 0;
-  width: 50vw;
+  width: 60vw;
 }
 
 .button {
@@ -83,7 +83,7 @@ hr {
 }
 
 .comments-container {
-  width: 50vw;
+  width: 60vw;
 }
 
 #half {
@@ -130,4 +130,68 @@ hr {
 
 #single-comment {
   margin: 2% 0;
+}
+
+.new-post-container,
+.new-comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5%;
+}
+
+.new-post-container textarea {
+  width: 40rem;
+  height: 10vw;
+  resize: none;
+  padding: 2%;
+  outline: 0;
+  font-size: 1.5rem;
+}
+
+.form-input {
+  width: 40.6rem;
+  height: 2vw;
+  outline: 0;
+  font-size: 1.5rem;
+  padding: 0 1%;
+}
+
+.form-container,
+.comment-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.form-button {
+  background-color: rgb(253, 57, 57);
+  color: white;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 2%;
+  width: 15rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.like-comment-buttons {
+  display: flex;
+  gap: 2rem;
+  margin: 4% 0;
+}
+
+.comment-button,
+.like-button {
+  background-color: rgb(253, 57, 57);
+  color: white;
+  height: 3rem;
+  width: 8rem;
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  font-size: 1.2rem;
+  cursor: pointer;
 }

@@ -9,21 +9,30 @@
         </div>
     </div>
     <p>
-        <%= @post.text%>
+        <%= @post.text %>
     </p>
+<div class="like-comment-buttons">
+  <%= form_with model: @like, url: user_post_likes_path(1, @post), scope: :like do |form|%>
+     <%= form.submit 'Like post', class: 'like-button' %>
+  <% end %>
+  <button type="button" class="comment-button"><%= link_to "Comment", new_user_post_comment_path( post_id: @post.id), { class: "user-link" } %></button>
+</div>
+
     <hr id="post-page-hr">
 
-            <div class="comments-container-post">
-                <% @comments=Post.find(@post.id).comments %>
-                    <% @comments.each do |comment| %>
-                        <div  id="single-comment">
-                            <span> <%= comment.user.name %> : <%= comment.text %></span>
-                        </div>
-                    <% end %>
-            </div>
-             
-            <% if @post.comments_counter != 0 %>
-            <hr id="half">
-            <% end %>
+    <div class="comments-container-post">
+        <% @comments=Post.find(@post.id).comments %>
+            <% @comments.each do |comment| %>
+                <div id="single-comment">
+                    <span>
+                        <%= comment.user.name %> : <%= comment.text %>
+                    </span>
+                </div>
+                <% end %>
+    </div>
+
+    <% if @post.comments_counter !=0 %>
+        <hr id="half">
+        <% end %>
 
 </section>
