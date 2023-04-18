@@ -6,16 +6,12 @@ RSpec.feature 'Users Posts', type: :feature do
   let!(:posts) { Post.all }
 
   first_user = User.create(name: 'Prantosh Biswas', photo: 'https://avatars.githubusercontent.com/u/93311467?v=4', bio: 'Full-Stack Developer')
-
-  #   second_user = User.create(name: 'John Michael Doe', photo: 'https://media.gettyimages.com/id/1301087492/vector/semi-random-rainbow-colored-60-60-60-triangle-pattern.jpg?s=612x612&w=gi&k=20&c=pb_dh_VF6L5IgOk4rsbfqM7zIjTA4VA3NxZoiqpJMcs=', bio: 'Front-End Developer')
   first_post = Post.create(title: 'First Post', text: 'This is my first post', author_id: first_user.id)
   second_post = Post.create(title: 'Third Post', text: 'This is my third post', author_id: first_user.id)
 
   third_post = Post.create(title: 'Fourth Post', text: 'This is my fourth post', author_id: first_user.id)
 
   first_comment = Comment.create(text: 'This is my first comment', user_id: first_user.id, post_id: first_post.id)
-
-  #   like = Like.create(user_id: first_user.id, post_id: first_post.id)
 
   before do
     visit user_path(first_user.id)
@@ -55,7 +51,6 @@ RSpec.feature 'Users Posts', type: :feature do
 
   it 'click on post should redirect to show post' do
     users.each do |user|
-      # create post for tested user
       Post.create(author: user, title: 'Hello1', text: 'This is my first post')
       Post.create(author: user, title: 'Hello2', text: 'This is my first post')
       Post.create(author: user, title: 'Hello3', text: 'This is my first post')
@@ -67,6 +62,13 @@ RSpec.feature 'Users Posts', type: :feature do
       click_on post.title
 
       expect(has_current_path?("/users/#{user.id}/posts/#{post.id}", wait: 5)).to be_truthy
+    end
+  end
+
+  describe 'Clicking to see all posts' do
+    it "should redirect to user's post's index page" do
+      click_link 'See all posts'
+      expect(current_path).to eq user_path(first_user)
     end
   end
 end
