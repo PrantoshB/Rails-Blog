@@ -91,17 +91,17 @@ Install this project with:
 
 ### 👤 Prantosh Biswas
 
-- GitHub: [@PrantoshB](https://github.com/PrantoshB)
+- GitHub:  [@PrantoshB](https://github.com/PrantoshB)
 - LinkedIn: [Prantosh Biswas](https://www.linkedin.com/in/prantosh/)
 - Twitter: [@prantalks](https://twitter.com/prantalks)
 
-### 👤 Tsohle Mokhemisi
+## 👤 Tsohle Mokhemisi
 
 - GitHub: [@githubhandle](https://github.com/tsohleDev)
 - Twitter: [@twitterhandle](https://twitter.com/RealTsohle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tsohle-mokhemisi-3687401b2/)
 
-### 👤 Dicko Allasane
+ 👤 Dicko Allasane
 
 - GitHub: [@githubhandle](https://github.com/Trast00)
 - Twitter: [@twitterhandle](https://twitter.com/AllassaneDicko0/)

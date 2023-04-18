@@ -12,8 +12,7 @@
     <hr>
 
     <div class="recent-posts">
-        <% @posts.each do |post| %>
-
+        <% @posts.includes(comments:[:user]).each do |post| %>
             <%= link_to  user_post_path(@user, post.id) do %>
                 <h2><%= post.title %>
                 </h2>
@@ -42,4 +41,6 @@
             <% end %>
         <% end %>
     </div>
+
+    <button>Pagination</button>
 </section>
