@@ -1,12 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :feature do
-
-  let!(:first_user) { User.first}
+  let!(:first_user) { User.first }
   let!(:second_user) { User.second }
-  let!(:users) { [first_user ] }
+  let!(:users) { [first_user] }
   let!(:posts) { Post.all }
-
 
   before(:example) do
     first_user = User.create(name: 'Prantosh Biswas', photo: 'https://avatars.githubusercontent.com/u/93311467?v=4', bio: 'Full-Stack Developer')
@@ -16,9 +14,8 @@ RSpec.describe 'Users', type: :feature do
 
     first_comment = Comment.create(text: 'This is my first comment', user_id: first_user.id, post_id: first_post.id)
 
-    like = Like.create( user_id: first_user.id, post_id: first_post.id)
+    like = Like.create(user_id: first_user.id, post_id: first_post.id)
     visit users_path
-
   end
   describe 'GET /users' do
     it 'I can see the username of all other users' do
@@ -33,25 +30,20 @@ RSpec.describe 'Users', type: :feature do
       expect(page).to have_content('1')
     end
 
-
     context 'when I click on a user' do
+      it 'username of all users' do
+        users.each do |user|
+          visit "/users/#{user.id}"
+          expect(page).to have_text(user.name)
+        end
+      end
 
-    it 'username of all users' do
-      users.each do |user|
-
-        visit "/users/#{user.id}"
-        expect(page).to have_text(user.name)
+      it 'can see the user profile picture' do
+        users.each do |user|
+          visit "/users/#{user.id}"
+          expect(page).to have_selector("img[src='#{user.photo}']")
+        end
       end
     end
-
-    it 'can see the user profile picture' do
-      users.each do |user|
-        visit "/users/#{user.id}"
-        expect(page).to have_selector("img[src='#{user.photo}']")
-      end
-    end
-
-  end
-
   end
 end
