@@ -7,7 +7,7 @@ RSpec.feature 'Users Posts', type: :feature do
 
   first_user = User.create(name: 'Prantosh Biswas', photo: 'https://avatars.githubusercontent.com/u/93311467?v=4', bio: 'Full-Stack Developer')
 
-  second_user = User.create(name: 'John Michael Doe', photo: 'https://media.gettyimages.com/id/1301087492/vector/semi-random-rainbow-colored-60-60-60-triangle-pattern.jpg?s=612x612&w=gi&k=20&c=pb_dh_VF6L5IgOk4rsbfqM7zIjTA4VA3NxZoiqpJMcs=', bio: 'Front-End Developer')
+  #   second_user = User.create(name: 'John Michael Doe', photo: 'https://media.gettyimages.com/id/1301087492/vector/semi-random-rainbow-colored-60-60-60-triangle-pattern.jpg?s=612x612&w=gi&k=20&c=pb_dh_VF6L5IgOk4rsbfqM7zIjTA4VA3NxZoiqpJMcs=', bio: 'Front-End Developer')
   first_post = Post.create(title: 'First Post', text: 'This is my first post', author_id: first_user.id)
   second_post = Post.create(title: 'Third Post', text: 'This is my third post', author_id: first_user.id)
 
@@ -15,7 +15,7 @@ RSpec.feature 'Users Posts', type: :feature do
 
   first_comment = Comment.create(text: 'This is my first comment', user_id: first_user.id, post_id: first_post.id)
 
-  like = Like.create(user_id: first_user.id, post_id: first_post.id)
+  #   like = Like.create(user_id: first_user.id, post_id: first_post.id)
 
   before do
     visit user_path(first_user.id)
