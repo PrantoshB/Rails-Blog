@@ -101,7 +101,7 @@ Install this project with:
 - Twitter: [@twitterhandle](https://twitter.com/RealTsohle)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/tsohle-mokhemisi-3687401b2/)
 
-## 👤 Dicko Allasane
+ 👤 Dicko Allasane
 
 - GitHub: [@githubhandle](https://github.com/Trast00)
 - Twitter: [@twitterhandle](https://twitter.com/AllassaneDicko0/)
