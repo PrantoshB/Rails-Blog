@@ -61,6 +61,5 @@ RSpec.describe 'Post index page', type: :feature do
     it 'should have a button for pagination' do
       expect(page).not_to have_button('Pagination')
     end
-
   end
 end
