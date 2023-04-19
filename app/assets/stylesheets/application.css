@@ -196,11 +196,21 @@ hr {
   cursor: pointer;
 }
 
-
-.login-container{
+.login-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.actions input {
+  border-radius: 5px;
+  background: rgb(253, 57, 57);
+  border: 0;
+  color: white;
+  font-size: 0.9rem;
+  width: 10rem;
+  padding: 3%;
+  margin: 1% 0 5% 0;
 }
 
 .login-container input:not([type="checkbox"]):not([type="submit"]) {
@@ -213,22 +223,8 @@ hr {
   font-size: 1.2rem;
 }
 
-.new_user{
+.new_user {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-
-.actions input{
-  align-self: center;
-  border-radius: 5px;
-  background:  rgb(253, 57, 57);
-  border: 0;
-  color: white;
-  font-size: 0.9rem;
-  width: 10rem;
-  padding: 3%;
-  align-self: center;
-  margin: 1% 0 5% 0;
 }
